@@ -201,7 +201,7 @@ class GcnEncoderGraph(nn.Module):
 
 
 '''
-For the AmgPooling we basically copied the structured from the softAssign pooling, we just replaced the Pooling operations in the forward pass using
+For the AmgPooling we basically copied the structure from diffPool, we just replaced the Pooling operations in the forward pass using
 the restriction pre-computed by the AMG algorithm.
 '''
 
@@ -305,9 +305,11 @@ class AmgPoolingGcnEncoder(GcnEncoderGraph):
             out = torch.sum(embedding_tensor, dim=1)
             out_all.append(out)
 
-        #Applying the Prolongation Operator from Algebraic Multigrid
+        #Applying the Restriction Operator from Algebraic Multigrid
         #Please note that the rescriction need to be performed to the Laplacian and not the
         #the Adjacency matrix
+        
+        #Restriction on Features
         x = torch.matmul(torch.transpose(prol, 1, 2), embedding_tensor).cuda()
 
         #Compute the Laplacian
