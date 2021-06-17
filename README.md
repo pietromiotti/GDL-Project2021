@@ -13,4 +13,4 @@ We implemented a new 'model', with the same structure of the softPool from the o
 
 
 ## CREDIT
-For all the parts the code was heavly based on https://github.com/RexYing/diffpool
+For all the parts the code is based on https://github.com/RexYing/diffpool
