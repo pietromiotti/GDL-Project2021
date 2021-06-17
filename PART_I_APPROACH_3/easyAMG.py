@@ -127,9 +127,7 @@ def computePrologator(A, SUBNODES_PG):
     for i in C:
         Prol[i,i] = A[i,i];
 
-    #Get only the columns that contains the "COARSEN NODES" (if you do not to
-    #this basically you the nodes that do not belong to the Coarsen Set are
-    #isolated nodes, provare per credere);
+    #Get only the columns that contain the "COARSEN NODES";
 
     Prol = Prol[:,C];
 
