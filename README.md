@@ -5,7 +5,7 @@ We perform Graph reduction using the Projection Operator from AMG and we basical
 
 
 ## Part I Approach 3
-We implemented a new 'model', with the same structure of the softPool from the original repo, we only edited the pooling layer: we used in fact the pre-computed projection operator from AMG.
+We implemented a new 'model', with the same structure of the softPool from the original repo, we only edited the pooling layer: we used in fact the Restriction operator from AMG.
 - cross_val.py: here we precompute the Prolongation operator, both for the training set and the validation set.
 - easyAMG: naive implementation of Algebraic Multigrid restriction operator.
 - econders.py: contains the amg-assign model.
