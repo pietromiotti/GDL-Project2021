@@ -10,3 +10,7 @@ We implemented a new 'model', with the same structure of the softPool from the o
 - easyAMG: naive implementation of Algebraic Multigrid restriction operator.
 - econders.py: contains the amg-assign model.
 - load_data, graph_sampler, partition: util files necessary to upload the dataset.
+
+
+## CREDIT
+For all the parts the code was heavly based on https://github.com/RexYing/diffpool
